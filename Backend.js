@@ -14,3 +14,6 @@
       }
     });
   });
+  document.querySelector('#sobre').scrollIntoView({
+  behavior: 'smooth'
+});

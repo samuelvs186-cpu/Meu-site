@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 ::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -23,7 +33,7 @@
       color: var(--text);
       font-family: 'DM Sans', sans-serif;
       min-height: 100vh;
-      /* subtle grid texture */
+      
       background-image:
         linear-gradient(rgba(2,187,116,0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(2,187,116,0.03) 1px, transparent 1px);
@@ -326,4 +336,29 @@
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(0,255,195,0.2);
+}
+.conteudo {
+  max-width: 800px;
+  margin: 120px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.conteudo h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--green-light);
+}
+
+.conteudo p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+.sobre-box {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 30px;
+  border-radius: 12px;
 }
