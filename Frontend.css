@@ -22,7 +22,7 @@ html {
       --surface:     #111111;
       --surface2:    #181818;
       --border:      rgba(2,187,116,0.18);
-      --text:        #e8e8e8;
+      --text:        #23ff48;
       --muted:       #7a7a7a;
     }
  
@@ -237,7 +237,7 @@ html {
       to   { opacity: 1; transform: translateX(-50%) translateY(0);   }
     }
  
-    /* ── HERO PLACEHOLDER ── */
+    
     .hero {
       max-width: 680px;
       margin: 100px auto 0;

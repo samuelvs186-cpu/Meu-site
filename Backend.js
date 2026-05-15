@@ -1,4 +1,6 @@
- const searchInput = document.getElementById("searchInput");
+// Busca de projetos
+const searchInput = document.getElementById("searchInput");
+if (searchInput) {
   const cards = document.querySelectorAll(".card");
 
   searchInput.addEventListener("input", () => {
@@ -6,14 +8,18 @@
 
     cards.forEach(card => {
       const text = card.dataset.name.toLowerCase();
-
-      if (text.includes(value)) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
+      card.style.display = text.includes(value) ? "block" : "none";
     });
   });
-  document.querySelector('#sobre').scrollIntoView({
-  behavior: 'smooth'
-});
+}
+
+// Scroll suave para âncoras (só executa se o elemento existir)
+const hash = window.location.hash;
+if (hash) {
+  const target = document.querySelector(hash);
+  if (target) {
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  }
+}

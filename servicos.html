@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página - Site do Samuka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Frontend.css">
+</head>
+<body>
+
+  <!-- HEADER IGUAL EM TODAS AS PÁGINAS -->
+  <header class="header">
+    <div class="header-content">
+      <img src="Dragon.png" alt="Logo do site" class="logo">
+      <div>
+        <p class="header-label">Portfólio &amp; Serviços</p>
+        <h1>Site do Samuka</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV IGUAL EM TODAS AS PÁGINAS -->
+  <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li class="has-sub">
+        <a href="servicos.html">Serviços</a>
+        <ul class="dropdown" role="menu">
+          <li><a href="servicos.html#webdesign"><span class="icon">🎨</span> Web Design</a></li>
+          <li><a href="servicos.html#desenvolvimento"><span class="icon">⚙️</span> Desenvolvimento</a></li>
+          <li><a href="servicos.html#seo"><span class="icon">📈</span> SEO</a></li>
+        </ul>
+      </li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
+      <li class="has-sub">
+        <a href="contato.html">Contato</a>
+        <ul class="dropdown" role="menu">
+          <li><a href="tel:+5547984821942"><span class="icon">📞</span> Telefone</a></li>
+          <li><a href="mailto:samuelvs186@gmail.com"><span class="icon">✉️</span> E-mail</a></li>
+          <div class="divider"></div>
+          <li><a href="https://wa.me/5547984821942" target="_blank"><span class="icon">💬</span> WhatsApp</a></li>
+          <li><a href="https://instagram.com/" target="_blank"><span class="icon">📸</span> Instagram</a></li>
+          <li><a href="https://linkedin.com/" target="_blank"><span class="icon">💼</span> LinkedIn</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="conteudo">
+  <h2>Serviços</h2>
+
+  <div class="sobre-box" id="webdesign">
+    <h3>🎨 Web Design</h3>
+    <p>Criação de layouts modernos, responsivos e com identidade visual marcante.</p>
+  </div>
+
+  <br>
+
+  <div class="sobre-box" id="desenvolvimento">
+    <h3>⚙️ Desenvolvimento</h3>
+    <p>Sites e sistemas do zero, com HTML, CSS, JavaScript, PHP e muito mais.</p>
+  </div>
+
+  <br>
+
+  <div class="sobre-box" id="seo">
+    <h3>📈 SEO</h3>
+    <p>Otimização para mecanismos de busca e melhora de performance do site.</p>
+  </div>
+</section>
+
+  <script src="Backend.js"></script>
+</body>
+</html>
