@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página - Site do Samuka</title>
+  <title>Contato - Site do Samuka</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,7 +11,6 @@
 </head>
 <body>
 
-  <!-- HEADER IGUAL EM TODAS AS PÁGINAS -->
   <header class="header">
     <div class="header-content">
       <img src="Dragon.png" alt="Logo do site" class="logo">
@@ -22,10 +21,9 @@
     </div>
   </header>
 
-  <!-- NAV IGUAL EM TODAS AS PÁGINAS -->
   <nav aria-label="Menu principal">
     <ul>
-      <li><a href="index.html">Início</a></li>
+      <li><a href="Index.html">Início</a></li>
       <li class="has-sub">
         <a href="servicos.html">Serviços</a>
         <ul class="dropdown" role="menu">
@@ -42,36 +40,46 @@
           <li><a href="tel:+5547984821942"><span class="icon">📞</span> Telefone</a></li>
           <li><a href="mailto:samuelvs186@gmail.com"><span class="icon">✉️</span> E-mail</a></li>
           <div class="divider"></div>
-          <li><a href="https://wa.me/5547984821942" target="_blank"><span class="icon">💬</span> WhatsApp</a></li>
-          <li><a href="https://instagram.com/" target="_blank"><span class="icon">📸</span> Instagram</a></li>
-          <li><a href="https://linkedin.com/" target="_blank"><span class="icon">💼</span> LinkedIn</a></li>
+          <li><a href="https://wa.me/5547984821942" target="_blank" rel="noopener"><span class="icon">💬</span> WhatsApp</a></li>
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener"><span class="icon">📸</span> Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/samuel-virgens-dos-santos-5929032bb" target="_blank" rel="noopener"><span class="icon">💼</span> LinkedIn</a></li>
         </ul>
       </li>
     </ul>
   </nav>
 
   <section class="conteudo">
-  <h2>Serviços</h2>
+    <h2>Contato</h2>
+    <p>Entre em contato para falar sobre seu projeto, orçamento ou parceria.</p>
 
-  <div class="sobre-box" id="webdesign">
-    <h3>🎨 Web Design</h3>
-    <p>Criação de layouts modernos, responsivos e com identidade visual marcante.</p>
-  </div>
+    <div class="contato-cards">
+      <div class="contato-card">
+        <h3>📞 Telefone</h3>
+        <p><a href="tel:+5547984821942">(47) 98482-1942</a></p>
+      </div>
+      <div class="contato-card">
+        <h3>✉️ E-mail</h3>
+        <p><a href="mailto:samuelvs186@gmail.com">samuelvs186@gmail.com</a></p>
+      </div>
+      <div class="contato-card">
+        <h3>💬 WhatsApp</h3>
+        <p><a href="https://wa.me/5547984821942" target="_blank" rel="noopener">Enviar mensagem</a></p>
+      </div>
+    </div>
 
-  <br>
+    <form class="contato-form" action="#" method="post">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
-  <div class="sobre-box" id="desenvolvimento">
-    <h3>⚙️ Desenvolvimento</h3>
-    <p>Sites e sistemas do zero, com HTML, CSS, JavaScript, PHP e muito mais.</p>
-  </div>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
 
-  <br>
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
 
-  <div class="sobre-box" id="seo">
-    <h3>📈 SEO</h3>
-    <p>Otimização para mecanismos de busca e melhora de performance do site.</p>
-  </div>
-</section>
+      <button type="submit" class="hero-btn">Enviar Mensagem</button>
+    </form>
+  </section>
 
   <script src="Backend.js"></script>
 </body>
