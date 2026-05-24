@@ -36,7 +36,16 @@ if (modal) {
       modalImage.src = image;
       modalImage.alt = `Imagem de capa do projeto ${title}`;
       modalGithub.href = github;
-      modalSite.dataset.link = site;
+
+      if (site && site !== '#' && site.trim() !== '') {
+        modalSite.disabled = false;
+        modalSite.dataset.link = site;
+        modalSite.setAttribute('aria-disabled', 'false');
+      } else {
+        modalSite.disabled = true;
+        modalSite.dataset.link = '';
+        modalSite.setAttribute('aria-disabled', 'true');
+      }
 
       modal.classList.add('active');
       modal.setAttribute('aria-hidden', 'false');
@@ -58,6 +67,13 @@ if (modal) {
   };
 
   modalClose.addEventListener('click', closeModal);
+  modalSite.addEventListener('click', () => {
+    const siteLink = modalSite.dataset.link;
+    if (!modalSite.disabled && siteLink) {
+      window.open(siteLink, '_blank', 'noopener');
+    }
+  });
+
   modal.addEventListener('click', event => {
     if (event.target === modal) {
       closeModal();
