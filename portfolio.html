@@ -53,7 +53,7 @@
   <section class="portfolio" aria-labelledby="portfolio-heading">
     <div class="portfolio-header">
       <h2 id="portfolio-heading">Meus trabalhos</h2>
-      <p>Veja alguns exemplos de projetos que já criei. Pesquise ou role para encontrar o que mais combina com você.</p>
+      <p>Veja alguns exemplos de projetos que já criei</p>
     </div>
 
     <input type="text" id="searchInput" placeholder="Buscar projetos...">
@@ -83,15 +83,19 @@
 
   <section class="portfolio" aria-labelledby="new-portfolio-heading">
     <div class="portfolio-header">
-      <h2 id="new-portfolio-heading">Novos protótipos</h2>
-      <p>Novos cards para mostrar seus primeiros protótipos com capa, título e descrição.</p>
+      <h2 id="new-portfolio-heading">Meus Prototipos</h2>
     </div>
 
     <div class="grid">
-      <article class="card" aria-labelledby="prototype-card-1-title">
-        <img src="GrovelyPort.png" alt="Capa do protótipo de aplicativo móvel" class="card-image">
+      <article class="card card-modal-trigger" aria-labelledby="prototype-card-1-title" tabindex="0" role="button"
+        data-modal-title="Grovely"
+        data-modal-desc="Grovely é um sistema de streaming de música que permite fazer upload, organizar e tocar suas faixas com uma interface moderna, perfis de artistas e playlists personalizadas."
+        data-modal-image="GrovelyPort.png"
+        data-modal-github="https://github.com/samuelvs186-cpu/Groovely.git"
+        data-modal-site="#">
+        <img src="GrovelyPort.png" alt="Capa do protótipo de aplicativo móvel Grovely" class="card-image">
         <h3 id="prototype-card-1-title">Grovely</h3>
-        <p>Um sistema de stream de musica onde você faz o upload de suas musicas.</p>
+        <p>Um sistema de stream de música onde você faz o upload de suas músicas.</p>
       </article>
 
       <article class="card" aria-labelledby="prototype-card-2-title">
@@ -113,6 +117,21 @@
       </article>
     </div>
   </section>
+
+  <div class="modal-overlay" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
+    <div class="modal-content" role="document">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Fechar modal">×</button>
+      <img src="" alt="" class="modal-image" id="modalImage">
+      <div class="modal-body">
+        <h3 id="modal-title">Título do projeto</h3>
+        <p id="modal-description">Descrição detalhada do projeto.</p>
+        <div class="modal-actions">
+          <a href="#" target="_blank" rel="noopener" class="modal-btn modal-btn-primary" id="modal-github">Ver no GitHub</a>
+          <button type="button" class="modal-btn modal-btn-secondary" id="modal-site" disabled>Ver site</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="Backend.js"></script>
 </body>
