@@ -50,34 +50,69 @@
     </ul>
   </nav>
 
-  <section class="portfolio">
-  <input type="text" id="searchInput" placeholder="Buscar projetos...">
-  <div class="grid">
-    <div class="card" data-name="site loja ecommerce">
-      <h3>Loja Virtual</h3>
-      <p>E-commerce completo</p>
+  <section class="portfolio" aria-labelledby="portfolio-heading">
+    <div class="portfolio-header">
+      <h2 id="portfolio-heading">Meus trabalhos</h2>
+      <p>Veja alguns exemplos de projetos que já criei. Pesquise ou role para encontrar o que mais combina com você.</p>
     </div>
-    <div class="card" data-name="site institucional empresa">
-      <h3>Site Empresarial</h3>
-      <p>Site institucional</p>
-    </div>
-    <div class="card" data-name="landing page marketing">
-      <h3>Games</h3>
-      <p>Jogos 2D e 3D</p>
-    </div>
-    <div class="card" data-name="app dashboard sistema">
-      <h3>Dashboard</h3>
-      <p>Sistema administrativo</p>
-    </div>
-    <div class="card" data-name="sites pessoais">
-      <h3>Sites</h3>
-      <p>sites Pessoais ou que fizeram parte do meu aprendizado</p>
 
-
+    <input type="text" id="searchInput" placeholder="Buscar projetos...">
+    <div class="grid">
+      <div class="card" data-name="site loja ecommerce">
+        <h3>Loja Virtual</h3>
+        <p>E-commerce completo</p>
+      </div>
+      <div class="card" data-name="site institucional empresa">
+        <h3>Site Empresarial</h3>
+        <p>Site institucional</p>
+      </div>
+      <div class="card" data-name="landing page marketing">
+        <h3>Games</h3>
+        <p>Jogos 2D e 3D</p>
+      </div>
+      <div class="card" data-name="app dashboard sistema">
+        <h3>Dashboard</h3>
+        <p>Sistema administrativo</p>
+      </div>
+      <div class="card" data-name="sites pessoais">
+        <h3>Sites</h3>
+        <p>Sites pessoais ou que fizeram parte do meu aprendizado</p>
+      </div>
     </div>
-  </div>
-</section>
-  
+  </section>
+
+  <section class="portfolio" aria-labelledby="new-portfolio-heading">
+    <div class="portfolio-header">
+      <h2 id="new-portfolio-heading">Novos protótipos</h2>
+      <p>Novos cards para mostrar seus primeiros protótipos com capa, título e descrição.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card" aria-labelledby="prototype-card-1-title">
+        <img src="GrovelyPort.png" alt="Capa do protótipo de aplicativo móvel" class="card-image">
+        <h3 id="prototype-card-1-title">Grovely</h3>
+        <p>Um sistema de stream de musica onde você faz o upload de suas musicas.</p>
+      </article>
+
+      <article class="card" aria-labelledby="prototype-card-2-title">
+        <img src="capa-prototipo-2.jpg" alt="Capa do protótipo de landing page" class="card-image">
+        <h3 id="prototype-card-2-title">Landing Page</h3>
+        <p>Descrição do protótipo de landing page. Diga qual foi o objetivo e o público.</p>
+      </article>
+
+      <article class="card" aria-labelledby="prototype-card-3-title">
+        <img src="capa-prototipo-3.jpg" alt="Capa do protótipo de site institucional" class="card-image">
+        <h3 id="prototype-card-3-title">Site Institucional</h3>
+        <p>Descrição do protótipo de site institucional. Conte o que foi desenvolvido.</p>
+      </article>
+
+      <article class="card" aria-labelledby="prototype-card-4-title">
+        <img src="capa-prototipo-4.jpg" alt="Capa do protótipo de dashboard" class="card-image">
+        <h3 id="prototype-card-4-title">Dashboard</h3>
+        <p>Descrição do protótipo de dashboard. Liste recursos visuais e funcionalidades.</p>
+      </article>
+    </div>
+  </section>
 
   <script src="Backend.js"></script>
 </body>
