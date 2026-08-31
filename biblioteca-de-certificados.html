@@ -337,10 +337,7 @@
       <h3 id="modalTitle">Certificado</h3>
 
       <div class="cert-modal__body">
-        <div class="cert-modal__image-box">
-          <img id="modalImage" src="Metarlugia.jpeg.webp" alt="Metarlugia.Jpeg.webp">
-        </div>
-        <div class="cert-modal__pdf-box">
+        <div class="cert-modal__pdf-box" style="grid-column: 1 / -1;">
           <iframe id="modalPdf" title="Visualização do PDF"></iframe>
         </div>
       </div>
@@ -355,25 +352,21 @@
   <script>
     const modal = document.getElementById('certModal');
     const modalTitle = document.getElementById('modalTitle');
-    const modalImage = document.getElementById('modalImage');
     const modalPdf = document.getElementById('modalPdf');
     const downloadPdf = document.getElementById('downloadPdf');
 
     const closeModal = () => {
       modal.classList.remove('is-open');
       modal.setAttribute('aria-hidden', 'true');
-      modalPdf.src = ''; // limpa o iframe ao fechar
+      modalPdf.src = '';
     };
 
     document.querySelectorAll('.cert-card').forEach((card) => {
       card.addEventListener('click', () => {
         const title = card.dataset.title || 'Certificado';
-        const image = card.dataset.image || '';
         const pdf = card.dataset.pdf || '';
 
         modalTitle.textContent = title;
-        modalImage.src = image;
-        modalImage.alt = `Imagem do certificado ${title}`;
 
         if (pdf) {
           modalPdf.src = pdf;
