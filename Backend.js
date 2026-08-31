@@ -25,6 +25,12 @@ if (modal) {
   const modalTriggers = document.querySelectorAll('.card[data-modal-title]');
   modalTriggers.forEach(card => {
     card.addEventListener('click', () => {
+      const biblioteca = card.dataset.modalBiblioteca;
+      if (biblioteca && biblioteca.trim() !== '') {
+        window.location.href = biblioteca;
+        return;
+      }
+
       const title = card.dataset.modalTitle;
       const desc = card.dataset.modalDesc;
       const image = card.dataset.modalImage;
